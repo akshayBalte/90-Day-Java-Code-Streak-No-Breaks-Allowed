@@ -1,45 +1,40 @@
-import java.lang.*;
-interface  Shape{
-	
-	 double calculateArea(); //abstarct method
-	
-	
-	
-	
-	
+interface X{
+	void f1();
 }
 
-
-class Circle implements Shape{
-	
-	double radius;
-	Circle(double radius)
-	{
-		this.radius=radius;
-	}
-	
-	@Override
-	public double calculateArea()
-	{
-		return (2*3.13*radius*radius);
-	}
-	
-		
-		
+interface Y extends X{
+	void f2();
 }
 
+class A implements Y{
+	
+	public void f1(){
+		System.out.println("X: f1()");
+	}
+	public void f2(){
+		System.out.println("Y: f2()");
+	}
+}
 
-class InterfaceDemo
-{
-	public static void main(String[] args)
-	{
-		Circle c=new Circle(112.0); 
-		//Shape c=new Circle(10.0);
-		//Shape s1=new Shape(12.2) //error
-		System.out.println(c.calculateArea());
-		//Square s=new Square();
-		//System.out.println(s.area());
+public class InterfaceDemo {
+	
+	public static void main(String args[]){
+		A a1 = new A();
+		a1.f1();
+		a1.f2();
+		
+		X a2 = new A();
+		a2.f1();
+		//a2.f2();//Error:CTE
+		
+		
+		Y a3 = new A();
+		a3.f1();
+		a3.f2();
+		
+		
+		
+		
 		
 	}
-	
 }

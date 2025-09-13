@@ -1,55 +1,50 @@
 
-class Parent
-{
-	int x=20;
+class A{
 	
-	void displayParent()
-	{
-		System.out.println("Parent class"+ " x value " +x);
+	A(){
+		
+		System.out.println("Const a: A()");
 	}
-	void m1()
-	{
-		System.out.println("Parent m1 method");
+	@Override
+	void display(){
+		System.out.println("A(): A");
+	}
+	
+}
+class B extends A{
+	
+	B(){
+		super();
+		System.out.println("Const b: B()");
+	}
+	@Override
+	void display(){
+		System.out.println("B(): B");
 	}
 }
-class Child extends Parent
-{
-	int c=50;
-	
-	void displayChild()
-	{
-		System.out.println("child class"+" value of c "+c);
+class C extends B{
+	C(){
+		super();
+		System.out.println("Const c: C()");
 	}
-	
-		void m2()
-	{
-		System.out.println("child m2 method");
+	@Override
+	void display(){
+		System.out.println("C(): C");
 	}
-
 }
 
-
-
-
-class InheritanceDemo
-{
-	public static void main(String[] args)
-	{
-		Child c=new Child();
-		c.displayChild();
-		c.displayParent();
-		c.m2();
+public class InheritanceDemo {
+	
+	public static void main(String args[]){
 		
-		c.m1();
+		C a1 = new C();
+		a1.display();
+		
+		//C a1 = new C();
+		//a1.display();
 		
 		
 		
-		
-		Parent p=new Parent();
-		p.displayParent();
-		p.m1();
-		//System.out.println("value accesing "+p.x);
-		//p.displayChild();//error 
 		
 	}
 }
