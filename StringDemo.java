@@ -19,9 +19,24 @@ class StringDemo{
 		System.out.println(s6.equals(s7));//Value of reference
 		System.out.println(s6 == s7);
 		
-		String s8 = "Hello";
-		String s9 = "Hello";
-		String s10 = "Helloo";
+		
+		//REassignment s1
+		s1 = "ABCDE";
+		//String s7 = "A";//Error:
+		String s8 = "A";
+		String s9 = "BC";
+		String s10 = s8+s9;
+		System.out.println(s10);
+		
+		String s = "Good";
+		System.out.println(s);
+		s.concat("Morning");
+		System.out.println(s);
+		
+		s = s.concat("Morning");
+		System.out.println(s);
+		
+		
 	}
 
 }
