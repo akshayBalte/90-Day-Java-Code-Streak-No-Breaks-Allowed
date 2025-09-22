@@ -1,5 +1,5 @@
 
-class ExceptionDemo3{
+class ExceptionDemo8{
 	
 	
 	public static void main(String[] args){
@@ -16,13 +16,8 @@ class ExceptionDemo3{
 			int k = i/j;//throws Arithmetic Exception
 			System.out.println(k);
 		
-		}catch(ArrayIndexOutOfBoundsException | ArithmeticException | NullpointerException e){
-			e.printStackTrace();
-		}catch(RuntimeException e){
-			e.printStackTrace();
-		}catch(Exception e){
-			e.printStackTrace();
-		}catch(Throwable e){
+		}catch(Exception e)
+		{
 			e.printStackTrace();
 		}finally{
 			System.out.println("Yes, everything is fine!!!");

@@ -16,8 +16,6 @@ class ExceptionDemo3{
 			int k = i/j;//throws Arithmetic Exception
 			System.out.println(k);
 		
-		}catch(ArrayIndexOutOfBoundsException | ArithmeticException | NullpointerException e){
-			e.printStackTrace();
 		}catch(RuntimeException e){
 			e.printStackTrace();
 		}catch(Exception e){

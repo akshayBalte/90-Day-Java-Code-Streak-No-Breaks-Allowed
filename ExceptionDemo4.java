@@ -18,12 +18,6 @@ class ExceptionDemo3{
 		
 		}catch(ArrayIndexOutOfBoundsException | ArithmeticException | NullpointerException e){
 			e.printStackTrace();
-		}catch(RuntimeException e){
-			e.printStackTrace();
-		}catch(Exception e){
-			e.printStackTrace();
-		}catch(Throwable e){
-			e.printStackTrace();
 		}finally{
 			System.out.println("Yes, everything is fine!!!");
 		}
